@@ -6,12 +6,18 @@ __version__="0.0.1"
 
 import os
 
-current_language = os.getenv("LANG", "en_EN")
-msg = "Hello, World!"
+languages = {"portuguese": "Olá mundo", "italian": "Ciao mondo", "english": "Hello world"}
 
-if current_language[:5] == "pt_BR":
-    msg = "Olá, Mundo!"
-elif current_language [:5]== "it_IT":
-    msg = "Ciao, Mudo!"
+print(f"Olá, por favor, escolha a linguagem: ")
+for language in languages:
+    print(f"  {language} ({languages[language]})")
 
-print(msg)
+language = input("Linguagem: ")
+
+if language == "portuguese":
+    print(languages.get(language))
+elif language == "italian":
+    print(languages.get(language))
+elif language == "english":    
+    print(languages.get(language))
+else:    print("Linguagem não reconhecida.")
