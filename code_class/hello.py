@@ -6,7 +6,7 @@ __version__="0.0.1"
 
 import os
 
-languages = {"portuguese": "pt_BR", "italian": "it_IT", "english": "en_EN"}
+languages = {"portuguese": "Olá mundo", "italian": "Ciao mondo", "english": "Hello world"}
 
 print(f"Olá, por favor, escolha a linguagem: ")
 for language in languages:
@@ -15,9 +15,9 @@ for language in languages:
 language = input("Linguagem: ")
 
 if language == "portuguese":
-    print("Olá, mundo!")
+    print(languages.get(language))
 elif language == "italian":
-    print("Ciao, mondo!")
+    print(languages.get(language))
 elif language == "english":    
-    print("Hello, world!")
+    print(languages.get(language))
 else:    print("Linguagem não reconhecida.")
